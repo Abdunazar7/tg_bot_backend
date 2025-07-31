@@ -10,7 +10,7 @@ server.use(express.json());
 server.use(cors());
 
 server.use("/products", ProductRoute);
-app.use("/users", userRoutes);
+server.use("/users", userRoutes);
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("Connected to DB"))
